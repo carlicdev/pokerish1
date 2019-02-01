@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <link href="/assets/overview.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <% include partials/button.ejs %>
+        <div class="nav-separator"></div>
+        <h1>By Player</h1>
+        
+        <div class="container">
+                <table id="overview" align="center">
+                    <thead>
+                        <tr>
+                            <th class="left">Jaacsin</th>
+                            <th>Session</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td class="left"><p><strong>Buyin</strong></p></td>
+                          <td><p><%= jaacsinTotals.avgBuyin.toFixed(2) %></p></td>
+                          <td><p><%= jaacsinTotals.totalBuyin %></p></td>
+                      </tr>
+                      <tr>
+                          <td class="left"><p><strong>Cashout</strong></p></td>
+                          <td><p><%= jaacsinTotals.avgCashout.toFixed(2) %></p></td>
+                          <td><p><%= jaacsinTotals.totalCashout %></p></td>
+                      </tr>
+                      <tr>
+                          <td class="left"><p><strong>Profit</strong></p></td>
+                          <td><h4><%= jaacsinTotals.avgProfit.toFixed(2) %></h4></td>
+                          <td><h4><%= jaacsinTotals.total %></h4></td>
+                      </tr>
+                      <tr>
+                            <td></td>
+                              <td class="sessions-tag"><p>Sessions:</p></td>
+                              <td class="sessions-tag"><p><%= jaacsinTotals.sessions %></p></td>
+                          </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container">
+                    <table id="overview" align="center">
+                        <thead>
+                            <tr>
+                                <th class="left">Pippen</th>
+                                <th>Session</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td class="left"><p><strong>Buyin</strong></p></td>
+                              <td><p><%= pippenTotals.avgBuyin.toFixed(2) %></p></td>
+                              <td><p><%= pippenTotals.totalBuyin %></p></td>
+                          </tr>
+                          <tr>
+                              <td class="left"><p><strong>Cashout</strong></p></td>
+                              <td><p><%= pippenTotals.avgCashout.toFixed(2) %></p></td>
+                              <td><p><%= pippenTotals.totalCashout %></p></td>
+                          </tr>
+                          <tr>
+                              <td class="left"><p><strong>Profit</strong></p></td>
+                              <td><h4><%= pippenTotals.avgProfit.toFixed(2) %></h4></td>
+                              <td><h4><%= pippenTotals.total %></h4></td>
+                          </tr>
+                          <tr>
+                              <td></td>
+                                <td class="sessions-tag"><p>Sessions:</p></td>
+                                <td class="sessions-tag"><p><%= pippenTotals.sessions %></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div class="container">
+                        <table id="overview" align="center">
+                            <thead>
+                                <tr>
+                                    <th class="left">Carlic</th>
+                                    <th>Session</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                  <td class="left"><p><strong>Buyin</strong></p></td>
+                                  <td><p><%= carlicTotals.avgBuyin.toFixed(2) %></p></td>
+                                  <td><p><%= carlicTotals.totalBuyin %></p></td>
+                              </tr>
+                              <tr>
+                                  <td class="left"><p><strong>Cashout</strong></p></td>
+                                  <td><p><%= carlicTotals.avgCashout.toFixed(2) %></p></td>
+                                  <td><p><%= carlicTotals.totalCashout %></p></td>
+                              </tr>
+                              <tr>
+                                  <td class="left"><p><strong>Profit</strong></p></td>
+                                  <td><h4><%= carlicTotals.avgProfit.toFixed(2) %></h4></td>
+                                  <td><h4><%= carlicTotals.total %></h4></td>
+                              </tr>
+                              <tr>
+                                    <td></td>
+                                      <td class="sessions-tag"><p>Sessions:</p></td>
+                                      <td class="sessions-tag"><p><%= carlicTotals.sessions %></p></td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+            
+    </body>
+</html>

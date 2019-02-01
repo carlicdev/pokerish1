@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <% include partials/nav.ejs %>
+        <div class="nav-separator"></div>
+        <h1>New Session</h1>
+        <div class="container">
+        <form method="POST" action="/newsession" >
+            <label for="Player">Player</label></br></br>
+            <select name="player">
+                    <option value="Jaacsin">Jaacsin</option>
+                    <option value="Pippen">Pippen</option>
+                    <option value="Carlic">Carlic</option>
+                </select></br></br>
+            <label for="gametype">GameType</label>
+            <label for="tablesize">TableSize</label></br></br>
+            <select name="gametype">
+                    <option value="Cashgame">Cashgame</option>
+                    <option value="MTT">MTT</option>
+                </select>
+            <select name="tablesize">
+                <option value="heads-up">Heads Up</option>
+                <option value="shorthanded">Shorthanded</option>
+                <option value="fullring">Fullring</option>
+            </select></br></br>
+            <label for="location">Location</label></br>
+            <input type="text" name="location" placeholder="astoria" value="" /></br></br>
+            <label for="game">Game</label></br>
+            <input type="text" name="game" placeholder="mixedgames 5000" value="" /></br></br>
+            <label for="buyin">Buy-in</label>
+            <label for="cashout">Cashout</label></br>
+            <input class="short-input" type="text" name="buyin" placeholder="5000"value="" />
+            <input class="short-input" type="text" name="cashout" placeholder="5000" value="" /></br></br>
+            <label for="date">Date</label></br>
+            <input class="short-input" type="text" name="date" placeholder="dd-mm-yy" value="" /></br></br>
+            <input class="button" type="submit" value="Save">
+        </form>
+        </div>
+    </body>
+</html>

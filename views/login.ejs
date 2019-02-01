@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <% include partials/nav.ejs %>
+        <div class="nav-separator"></div>
+        <p>Please login...</p>
+        <h1>Mi Cuenta</h1>
+        <div class="container">
+        <form method="POST" action="/login" >
+            <label for="email">Cuenta</label></br>
+            <input type="text" name="email" placeholder="correo electronico registrado" value="" /></br>
+            <label for="password">Password</label></br>
+            <input type="text" name="password" placeholder="contraseña" value="" /></br>
+            <input class ="button" type="submit" value="Log In">
+        </form>
+        </div>
+    </body>
+</html>

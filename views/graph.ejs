@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+            <div class="chart-container">
+                        <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        <script>
+
+                var ctx = document.getElementById("myChart");
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: [<%= graphLabels %>], 
+                        datasets: [{
+                            label: 'Winnings',
+                            backgroundColor: 'rgb(52, 98, 54)',
+                            lineTension: 0,
+                            data: <%- JSON.stringify(dataToGraph) %>,
+                            borderColor: 'yellow',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Overall',
+                            fontColor: 'white'
+                        },
+                        scales: {
+                                xAxes: [{
+                                        ticks: {
+                                            fontColor: 'white',
+                                            autoSkipPadding: 12,
+                                                major: {
+                                                    fontStyle: 'bold',
+                                                    fontColor: 'white'
+                                                }
+                                        },
+						display: true,
+						scaleLabel: {
+							display: true,
+                            labelString: 'Sessions',
+                            fontColor: 'white'
+						}
+					}],
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: false,
+                                    fontColor: 'white'
+                                }
+                            }]
+                        }
+                    }
+                });
+        </script>
+    </body>
+</html>

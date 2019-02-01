@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <link href="/assets/overview.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <% include partials/button.ejs %>
+        <div class="nav-separator"></div>
+        <h1>Overview</h1>
+        <div class="total-container">
+            <h3 class="total-container">Total:</h3>
+            <h2><%= totals.total %></h2>
+        </div>
+        
+        <div class="container">
+                <table id="overview" align="center">
+                    <thead>
+                        <tr>
+                            <th class="left">Profit</th>
+                            <th>Session</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td class="left"><p><strong>Buyin</strong></p></td>
+                          <td><p><%= totals.avgBuyin.toFixed(2) %></p></td>
+                          <td><p><%= totals.totalBuyin %></p></td>
+                      </tr>
+                      <tr>
+                          <td class="left"><p><strong>Cashout</strong></p></td>
+                          <td><p><%= totals.avgCashout.toFixed(2) %></p></td>
+                          <td><p><%= totals.totalCashout %></p></td>
+                      </tr>
+                      <tr>
+                          <td class="left"><p><strong>Profit</strong></p></td>
+                          <td><h4><%= totals.avgProfit.toFixed(2) %></h4></td>
+                          <td><h4><%= totals.total %></h4></td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+            <% include graph.ejs %>
+    </body>
+</html>

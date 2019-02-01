@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <link href="/assets/allsessions.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <% include partials/button.ejs %>
+        <div class="nav-separator"></div>
+        <h1>All Sessions</h1>
+        <% if (result) { %>
+            <% const sessions = result.reverse(); %>
+          <%  sessions.forEach(sess => {  %>
+            <div class="container">
+                <table class="all-sessions" align="center">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="left"><p><%= sess.location %></p></th>
+                            <th class="right"><p><%= sess.date %></p></th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="left"><p><%= sess.player %></p></td>
+                            <td class="right"><h3><%= sess.session_balance %></h3></td>
+                        </tr>
+                        <tr>
+                            <td><p><%= sess.gametype %></p></td>
+                            <td><p><%= sess.game %></p></td>
+                            <td><p><%= sess.tablesize %></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>Buy In:</p></td>
+                            <td><h4><%= sess.buyin %></h4></td>
+                        </tr>
+                        <tr>
+                            <td><p>Cashout:</p></td>
+                            <td><h4><%= sess.cashout %></h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+         <%   }); %>
+
+        <% } %>
+    </body>
+</html>
